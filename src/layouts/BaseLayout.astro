@@ -1,0 +1,21 @@
+---
+import '../styles/global.css';
+import SplashScreen from '../components/SplashScreen.astro';
+---
+
+<html lang="es" class="bg-claro dark:bg-neutro transition-all duration-400">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>BolTech</title>
+    <slot name="head" />
+  </head>
+  <body class="min-h-screen flex flex-col font-sans text-neutro dark:text-claro transition-all duration-400 bg-gradient-to-br from-tech/20 via-vision/10 to-claro">
+    <slot name="navbar" />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <slot name="footer" />
+  </body>
+</html>

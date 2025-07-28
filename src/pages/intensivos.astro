@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/boltech.css';
+---
+<BaseLayout>
+  <Navbar slot="navbar" />
+  <section class="mx-auto py-16 px-4 lg:max-w-4xl animate-glass">
+    <h1 class="font-extrabold text-tech text-center mb-8" style="font-size:2.2rem;">Intensivos & Eventos</h1>
+    <div class="flex flex-wrap gap-8 justify-center">
+      <div class="bg-glass shadow-glass rounded-2xl p-6" style="min-width:260px;max-width:350px;">
+        <h2 class="font-bold text-vision mb-2" style="font-size:1.1rem;">Bootcamp Web3</h2>
+        <p class="text-neutro mb-2">Sumérgete en el desarrollo blockchain con talleres prácticos y mentoría.</p>
+        <span class="text-tech" style="font-size:0.9rem;">Agosto 2025</span>
+      </div>
+      <div class="bg-glass shadow-glass rounded-2xl p-6" style="min-width:260px;max-width:350px;">
+        <h2 class="font-bold text-vision mb-2" style="font-size:1.1rem;">Taller NFT Creativo</h2>
+        <p class="text-neutro mb-2">Aprende a crear, lanzar y comercializar NFTs en ecosistemas reales.</p>
+        <span class="text-tech" style="font-size:0.9rem;">Septiembre 2025</span>
+      </div>
+    </div>
+  </section>
+  <Footer slot="footer" />
+</BaseLayout>

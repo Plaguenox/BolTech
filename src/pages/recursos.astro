@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/boltech.css';
+---
+<BaseLayout>
+  <Navbar slot="navbar" />
+  <section class="mx-auto py-16 px-4 lg:max-w-4xl animate-glass">
+    <h1 class="font-extrabold text-tech text-center mb-8" style="font-size:2.2rem;">Recursos y Artículos</h1>
+    <div class="flex flex-wrap gap-8 justify-center">
+      <div class="bg-glass shadow-glass rounded-2xl p-6" style="min-width:260px;max-width:350px;">
+        <h2 class="font-bold text-vision mb-2" style="font-size:1.1rem;">¿Qué es Blockchain?</h2>
+        <p class="text-neutro mb-2">Descubre los conceptos clave y casos de uso reales.</p>
+        <a href="#" class="text-tech" style="text-decoration:underline;">Leer más</a>
+      </div>
+      <div class="bg-glass shadow-glass rounded-2xl p-6" style="min-width:260px;max-width:350px;">
+        <h2 class="font-bold text-vision mb-2" style="font-size:1.1rem;">Guía de Wallets</h2>
+        <p class="text-neutro mb-2">Aprende a elegir y usar billeteras digitales de forma segura.</p>
+        <a href="#" class="text-tech" style="text-decoration:underline;">Leer más</a>
+      </div>
+    </div>
+  </section>
+  <Footer slot="footer" />
+</BaseLayout>

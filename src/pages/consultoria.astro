@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/boltech.css';
+---
+<BaseLayout>
+  <Navbar slot="navbar" />
+  <section class="mx-auto py-16 px-4 lg:max-w-4xl animate-glass">
+    <h1 class="font-extrabold text-tech text-center mb-8" style="font-size:2.2rem;">Consultoría Blockchain</h1>
+    <div class="bg-glass shadow-glass rounded-2xl p-8 mb-8">
+      <p class="text-neutro text-center" style="font-size:1.1rem;">Asesoría personalizada para empresas, startups y organizaciones que buscan implementar soluciones blockchain en Bolivia y Latinoamérica.</p>
+    </div>
+    <div class="flex flex-wrap gap-8 justify-center">
+      <div class="bg-glass shadow-glass rounded-xl p-6" style="flex:1;min-width:260px;">
+        <h2 class="font-bold text-tech mb-2" style="font-size:1.1rem;">Casos de Éxito</h2>
+        <ul class="text-neutro" style="padding-left:1.5rem;">
+          <li>Implementación de trazabilidad en cadena de suministro.</li>
+          <li>Tokenización de activos para empresas locales.</li>
+          <li>Capacitación y consultoría a entidades financieras.</li>
+        </ul>
+      </div>
+      <div class="bg-glass shadow-glass rounded-xl p-6" style="flex:1;min-width:260px;">
+        <h2 class="font-bold text-tech mb-2" style="font-size:1.1rem;">Solicita tu asesoría</h2>
+        <form class="flex flex-col gap-4">
+          <input type="text" placeholder="Nombre" class="rounded bg-claro border-2 border-tech p-4" required />
+          <input type="email" placeholder="Correo electrónico" class="rounded bg-claro border-2 border-tech p-4" required />
+          <textarea placeholder="¿En qué podemos ayudarte?" class="rounded bg-claro border-2 border-tech p-4" required></textarea>
+          <button type="submit" class="rounded bg-vision text-white font-bold shadow-glass" style="padding:0.7rem 2rem;">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <Footer slot="footer" />
+</BaseLayout>

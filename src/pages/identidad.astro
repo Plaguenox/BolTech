@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/boltech.css';
+---
+<BaseLayout>
+  <Navbar slot="navbar" />
+  <section class="mx-auto py-16 px-4 lg:max-w-4xl animate-glass">
+    <h1 class="font-extrabold text-tech text-center mb-8" style="font-size:2.2rem;">Identidad Visual</h1>
+    <div class="bg-glass shadow-glass rounded-2xl p-8 mb-8">
+      <h2 class="font-bold text-vision mb-2" style="font-size:1.3rem;">Paleta de Colores</h2>
+      <div class="flex gap-4 mb-4">
+        <div class="w-12 h-12 rounded-full bg-tech border-2 border-white"></div>
+        <div class="w-12 h-12 rounded-full bg-vision border-2 border-white"></div>
+        <div class="w-12 h-12 rounded-full bg-neutro border-2 border-white"></div>
+        <div class="w-12 h-12 rounded-full bg-claro border-2 border-white"></div>
+      </div>
+      <h2 class="font-bold text-vision mb-2" style="font-size:1.3rem;">Tipografía</h2>
+      <p class="text-neutro mb-4">Fuente principal: Inter, sans-serif.</p>
+      <h2 class="font-bold text-vision mb-2" style="font-size:1.3rem;">Logotipo</h2>
+      <img src="/Boltech.png" alt="Logo BolTech" class="w-24 h-24 object-contain mb-4" />
+    </div>
+  </section>
+  <Footer slot="footer" />
+</BaseLayout>

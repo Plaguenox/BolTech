@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/boltech.css';
+---
+<BaseLayout>
+  <Navbar slot="navbar" />
+  <section class="mx-auto py-16 px-4 lg:max-w-4xl animate-glass">
+    <h1 class="font-extrabold text-tech text-center mb-8" style="font-size:2.2rem;">Sobre BolTech</h1>
+    <div class="bg-glass shadow-glass rounded-2xl p-8 mb-8">
+      <h2 class="font-bold text-vision mb-2" style="font-size:1.1rem;">Misión</h2>
+      <p class="text-neutro mb-4">Impulsar la educación y adopción de blockchain en Bolivia y la región.</p>
+      <h2 class="font-bold text-vision mb-2" style="font-size:1.1rem;">Visión</h2>
+      <p class="text-neutro mb-4">Ser referentes en formación y consultoría blockchain en Latinoamérica.</p>
+      <h2 class="font-bold text-vision mb-2" style="font-size:1.1rem;">Valores</h2>
+      <ul class="text-neutro" style="padding-left:1.5rem;">
+        <li>Innovación</li>
+        <li>Colaboración</li>
+        <li>Transparencia</li>
+      </ul>
+    </div>
+  </section>
+  <Footer slot="footer" />
+</BaseLayout>

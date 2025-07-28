@@ -1,0 +1,12 @@
+---
+const { img = '/assets/images/Boltech.png', title = 'Curso Blockchain', description = 'Aprende desde cero', level = 'Básico' } = Astro.props;
+---
+<div class="bg-white/10 backdrop-blur-glass rounded-2xl shadow-glass p-6 flex flex-col items-center transition-transform hover:scale-105 cursor-pointer group">
+  <img src={img} alt={title} class="w-16 h-16 mb-4 rounded-xl shadow-lg border-2 border-white/30 object-cover" loading="lazy" />
+  <h3 class="text-tech font-bold text-lg mb-1">{title}</h3>
+  <span class="text-xs text-vision mb-2">{level}</span>
+  <p class="text-neutro dark:text-claro text-sm mb-4 text-center">{description}</p>
+  <button class="px-4 py-2 rounded-lg bg-vision text-white font-semibold shadow-glass transition-all hover:scale-105 focus:outline-none">
+    Inscribirme
+  </button>
+</div>

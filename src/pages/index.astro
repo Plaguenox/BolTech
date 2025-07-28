@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import Footer from '../components/Footer.astro';
+import SplashScreen from '../components/SplashScreen.astro';
+import Testimonial from '../components/Testimonial.astro';
+import '../styles/boltech.css';
+---
+<BaseLayout>
+  <Navbar slot="navbar" />
+  <main class="mx-auto py-20 px-4 lg:max-w-4xl animate-fadein">
+    <section class="animate-slideup">
+      <Hero />
+    </section>
+    <section class="mt-16 mb-12 flex flex-col items-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-vision mb-6 text-center">¿Por qué aprender con BolTech?</h2>
+      <div class="grid md:grid-cols-3 gap-8 w-full">
+        <div class="bg-glass rounded-2xl p-6 flex flex-col items-center shadow-glass">
+          <img src="/assets/images/bolt1.png" alt="Aprendizaje práctico" class="w-16 h-16 mb-3" />
+          <h3 class="text-tech font-bold mb-2 text-lg">Aprendizaje práctico</h3>
+          <p class="text-neutro text-center text-sm">Clases enfocadas en proyectos reales y ejercicios aplicados.</p>
+        </div>
+        <div class="bg-glass rounded-2xl p-6 flex flex-col items-center shadow-glass">
+          <img src="/assets/images/bol2.png" alt="Mentores expertos" class="w-16 h-16 mb-3" />
+          <h3 class="text-tech font-bold mb-2 text-lg">Mentores expertos</h3>
+          <p class="text-neutro text-center text-sm">Aprende de profesionales activos en la industria blockchain.</p>
+        </div>
+        <div class="bg-glass rounded-2xl p-6 flex flex-col items-center shadow-glass">
+          <img src="/assets/images/bolt3.png" alt="Comunidad activa" class="w-16 h-16 mb-3" />
+          <h3 class="text-tech font-bold mb-2 text-lg">Comunidad activa</h3>
+          <p class="text-neutro text-center text-sm">Únete a una red de estudiantes, desarrolladores y entusiastas Web3.</p>
+        </div>
+      </div>
+    </section>
+    <section class="my-16 flex flex-col items-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-tech mb-6 text-center">¡Comienza tu viaje blockchain hoy!</h2>
+      <a href="/academia" class="rounded-xl bg-vision text-white font-bold shadow-glass px-8 py-4 text-lg transition-all hover:scale-105" style="text-decoration:none;">Ver cursos disponibles</a>
+    </section>
+    <section class="my-16 flex flex-col items-center">
+      <Testimonial />
+    </section>
+  </main>
+  <Footer slot="footer" />
+  <div id="splash-root">
+    <SplashScreen logoSrc="/assets/logo/Logo1.png" welcomeText="Bienvenido a BolTech" />
+  </div>
+  <script is:inline>
+    // Oculta el splash después de 1.5s
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        const splash = document.getElementById('splash-root');
+        if (splash) splash.style.display = 'none';
+      }, 1500);
+    });
+  </script>
+</BaseLayout>

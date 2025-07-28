@@ -1,0 +1,32 @@
+---
+import '../styles/boltech.css';
+---
+<section style="position:relative;min-height:60vh;" class="flex flex-col items-center justify-center py-16 animate-glass select-none">
+  <div class="bg-glass shadow-glass rounded-3xl px-8 py-12 flex flex-col items-center mx-auto" style="max-width:32rem;width:100%;">
+    <img src="/BoltechColName.png" alt="BolTech logo" class="w-40 h-40 mb-8 drop-shadow-lg" style="filter:drop-shadow(0 4px 24px #8C4BFF55);" loading="lazy" />
+    <h1 class="font-extrabold text-tech mb-4 text-center" style="font-size:2.2rem;">
+      <span id="slogan" style="display:inline-block;"></span>
+    </h1>
+    <p class="text-neutro mb-8 text-center" style="font-size:1.1rem;">Academia blockchain boliviana</p>
+    <div class="flex gap-4">
+      <a href="/academia" class="rounded-xl bg-tech text-white font-bold shadow-glass" style="padding:0.9rem 2rem;text-decoration:none;transition:transform .2s;">Explora cursos</a>
+      <a href="/consultoria" class="rounded-xl bg-vision text-white font-bold shadow-glass" style="padding:0.9rem 2rem;text-decoration:none;transition:transform .2s;">Solicita asesoría</a>
+    </div>
+  </div>
+  <div id="particles-bg" style="position:absolute;inset:0;z-index:-10;pointer-events:none;"></div>
+  <script is:inline>
+    const slogan = "Conectando saberes, activando futuros";
+    let i = 0;
+    function typeWriter() {
+      const el = document.getElementById("slogan");
+      if (!el) return;
+      if (i < slogan.length) {
+        el.innerHTML += slogan.charAt(i);
+        i++;
+        setTimeout(typeWriter, 60);
+      }
+    }
+    typeWriter();
+  </script>
+</section>
+

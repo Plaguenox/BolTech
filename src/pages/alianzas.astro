@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/boltech.css';
+---
+<BaseLayout>
+  <Navbar slot="navbar" />
+  <section class="mx-auto py-16 px-4 lg:max-w-4xl animate-glass">
+    <h1 class="font-extrabold text-tech text-center mb-8" style="font-size:2.2rem;">Alianzas Estratégicas</h1>
+    <div class="flex flex-wrap gap-8 justify-center items-center mb-8">
+      <img src="/assets/images/ali1.png" alt="Aliado 1" class="w-24 h-24 object-contain rounded-xl shadow-glass" style="background:rgba(255,255,255,0.20);" />
+      <img src="/assets/images/ali2.png" alt="Aliado 2" class="w-24 h-24 object-contain rounded-xl shadow-glass" style="background:rgba(255,255,255,0.20);" />
+      <img src="/assets/images/ali3.png" alt="Aliado 3" class="w-24 h-24 object-contain rounded-xl shadow-glass" style="background:rgba(255,255,255,0.20);" />
+    </div>
+    <div class="bg-glass shadow-glass rounded-2xl p-8">
+      <h2 class="font-bold text-vision mb-2" style="font-size:1.1rem;">¿Quieres ser nuestro aliado?</h2>
+      <form class="flex flex-col gap-4">
+        <input type="text" placeholder="Nombre de la institución" class="rounded bg-claro border-2 border-tech p-4" required />
+        <input type="email" placeholder="Correo de contacto" class="rounded bg-claro border-2 border-tech p-4" required />
+        <button type="submit" class="rounded bg-tech text-white font-bold shadow-glass" style="padding:0.7rem 2rem;">Enviar</button>
+      </form>
+    </div>
+  </section>
+  <Footer slot="footer" />
+</BaseLayout>

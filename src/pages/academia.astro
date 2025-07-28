@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import CursoCard from '../components/CursoCard.astro';
+import '../styles/boltech.css';
+---
+<BaseLayout>
+  <Navbar slot="navbar" />
+  <section class="mx-auto py-16 px-4 lg:max-w-4xl animate-glass">
+    <h1 class="font-extrabold text-tech text-center mb-8" style="font-size:2.2rem;">Academia BolTech</h1>
+    <div class="flex flex-wrap gap-8 justify-center">
+      <CursoCard img="/assets/images/bolt1.png" title="Introducción a Blockchain" description="Aprende los fundamentos de blockchain y criptografía." level="Básico" />
+      <CursoCard img="/assets/images/bol2.png" title="Smart Contracts" description="Desarrolla contratos inteligentes en Solidity y Ethereum." level="Intermedio" />
+      <CursoCard img="/assets/images/bolt3.png" title="Desarrollo Web3" description="Crea aplicaciones descentralizadas (dApps) con tecnologías Web3." level="Avanzado" />
+    </div>
+  </section>
+  <Footer slot="footer" />
+</BaseLayout>
